@@ -10,12 +10,15 @@ window.alert("Testing alert box...");
 
 /*Variables*/
 /*(Declaration : var, let, const) (name) = (input)*/
-let day;
-day = 6;
-console.log("Day: " + day);
+/*let : a varible that can be changed*/
+let aNumber;
+aNumber = 6.23434;
+aNumber += 2;
+console.log("(Let) Number : " + aNumber);
 
-let month = 3;
-console.log("Month: " + month);
+/*const : a varible thats not meant to be changed*/
+const PI = 3.1415;
+console.log("(Const) PI is :", PI);
 console.log("\n");
 
 /* User input */
@@ -34,11 +37,11 @@ console.log("(Num) Age :", age);
 
 /*String : Characters*/
 let name = "BRYAN";
-console.log("(String) Name :" + name);
+console.log("(String) Name :", name);
 
 /*Boolean : True/False*/
 let student = false;
-console.log("(Boolean) Student :" + student);
+console.log("(Boolean) Student : ", student);
 console.log("\n");
 
 /* Data type conversion */
@@ -63,23 +66,35 @@ console.log("Added :", value1);
 value1 = value1 - 3;
 console.log("Subtract :", value1);
 value1 = value1 * 3;
-console.log("Times :", value1);
+console.log("Multiplied :", value1);
 value1 = value1 / 3;
-console.log("Divid :", value1);
+console.log("Divided :", value1);
 
 /* Remainder */
 value1 = value1 % 4;
 console.log("Remainder :", value1);
 console.log("\n");
 
-/* Reassigning variable */
+/* Re-assigning variable */
 let value2 = 5;
 value2 += 1;
 console.log("Added value :", value2);
 value2 -= 2;
 console.log("Subtracted value :", value2);
 value2 *= 2;
-console.log("Timed value :", value2);
+console.log("Multiplied value :", value2);
 value2 /= 3;
 console.log("divided value :", value2);
 console.log("\n");
+
+/* Math */
+/*Some examples of Math methods*/
+aNumber = Math.round(aNumber);
+console.log("Rounded :", aNumber);
+
+aNumber = Math.pow(aNumber, 2);
+console.log("Power (2) :", aNumber);
+
+/*Genrates number between 0-1*/
+aNumber = Math.random();
+console.log("Random number :", aNumber);
