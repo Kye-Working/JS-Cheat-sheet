@@ -18,6 +18,12 @@ let month = 3;
 console.log("Month: " + month);
 console.log("\n");
 
+/* User input */
+/* Window-box input */
+let username = window.prompt("Enter username :");
+console.log("Entered username :", username);
+console.log("\n");
+
 /* Data types */
 /*Num : Numbers*/
 let age = 21;
@@ -35,9 +41,23 @@ let student = false;
 console.log("(Boolean) Student :" + student);
 console.log("\n");
 
+/* Data type conversion */
+let a;
+let b;
+let c;
+
+a = Number(3.14);
+b = String(3.14);
+c = Boolean(3.14);
+
+/*typeof shows which type*/
+console.log("Type is :", typeof a);
+console.log("Type is :", typeof b);
+console.log("Type is :", typeof c);
+console.log("\n");
+
 /* Arithmetic expressions (JS operates under BIDMAS")*/
 let value1 = 10;
-
 value1 = value1 + 3;
 console.log("Added :", value1);
 value1 = value1 - 3;
@@ -46,16 +66,14 @@ value1 = value1 * 3;
 console.log("Times :", value1);
 value1 = value1 / 3;
 console.log("Divid :", value1);
-console.log("\n");
 
 /* Remainder */
 value1 = value1 % 4;
 console.log("Remainder :", value1);
 console.log("\n");
 
-/* Reassigning varible */
+/* Reassigning variable */
 let value2 = 5;
-console.log("Default value :", value2);
 value2 += 1;
 console.log("Added value :", value2);
 value2 -= 2;
