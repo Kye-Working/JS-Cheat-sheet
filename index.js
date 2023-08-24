@@ -97,7 +97,17 @@ console.log("Power (2) :", aNumber);
 
 /*Genrates number between 0-1*/
 aNumber = Math.random();
-console.log("Random number :", aNumber);
+console.log("Random number(0-1) :", aNumber);
+
+/* Random number between 1-6 */
+aNumber = Math.floor(aNumber * 6) + 1;
+console.log("Dice :", aNumber);
+console.log("\n");
+
+/* Some string methods */
+console.log("Username length :", username.length);
+console.log("Username character (4) :", username.charAt(4));
+console.log("Username uppercase :", username.toUpperCase());
 
 /* Creating a counter */
 let count = 0;
