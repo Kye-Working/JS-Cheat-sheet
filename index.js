@@ -98,3 +98,26 @@ console.log("Power (2) :", aNumber);
 /*Genrates number between 0-1*/
 aNumber = Math.random();
 console.log("Random number :", aNumber);
+
+/* Creating a counter */
+let count = 0;
+
+/* document : Used for excuting code on web pages */
+/* .getElementById : Returns ID */
+/* .onclick : Excutes function when clicked */
+/* function(){} : A set of statements that preforms a task */
+document.getElementById("Up-button").onclick = function () {
+  count += 1;
+  /* innerHTML : Used to get/change elements in HTML */
+  document.getElementById("Count-label").innerHTML = count;
+};
+
+document.getElementById("Down-button").onclick = function () {
+  count -= 1;
+  document.getElementById("Count-label").innerHTML = count;
+};
+
+document.getElementById("Reset-button").onclick = function () {
+  count = 0;
+  document.getElementById("Count-label").innerHTML = count;
+};
