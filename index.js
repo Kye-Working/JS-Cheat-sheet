@@ -109,9 +109,13 @@ console.log("Username length :", username.length);
 console.log("Username character (4) :", username.charAt(4));
 console.log("Username uppercase :", username.toUpperCase());
 
+/* Method chaining */
+/*putting . between methods chains them together*/
+console.log("Username first letter :", username.toUpperCase().charAt(0));
+console.log("\n");
+
 /* Creating a counter */
 let count = 0;
-
 /* document : Used for excuting code on web pages */
 /* .getElementById : Returns ID */
 /* .onclick : Excutes function when clicked */
@@ -131,3 +135,14 @@ document.getElementById("Reset-button").onclick = function () {
   count = 0;
   document.getElementById("Count-label").innerHTML = count;
 };
+
+/* IF statement */
+let num1 = Math.floor(Math.random() * 6 + 1);
+console.log("DICE :", num1);
+if (num1 < 3) {
+  console.log("BAD ROLL");
+} else if (num1 == 3) {
+  console.log("DECENT ROLL");
+} else {
+  console.log("GOOD ROLL");
+}
