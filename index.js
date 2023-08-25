@@ -136,6 +136,18 @@ document.getElementById("Reset-button").onclick = function () {
   document.getElementById("Count-label").innerHTML = count;
 };
 
+/* IF statement */
+let num1 = Math.floor(Math.random() * 6 + 2);
+console.log("DICE :", num1);
+if (num1 < 3) {
+  console.log("BAD ROLL");
+} else if (num1 == 3) {
+  console.log("DECENT ROLL");
+} else {
+  console.log("GOOD ROLL");
+}
+console.log("\n");
+
 /* Switch */
 let num2 = Math.floor(Math.random() * 7 + 1);
 switch (num2) {
@@ -160,24 +172,39 @@ switch (num2) {
   default:
     console.log(num2 + "... a dice doesnt go that high ???");
 }
+console.log("\n");
 
-/* IF statement */
-let num1 = Math.floor(Math.random() * 6 + 1);
-console.log("DICE :", num1);
-if (num1 < 3) {
-  console.log("BAD ROLL");
-} else if (num1 == 3) {
-  console.log("DECENT ROLL");
+/* AND & OR operators */
+let num3 = Math.floor(Math.random() * 24 + 1);
+// && (and) Both conditions must be true
+if (num3 > 12 && num3 < 18) {
+  console.log("It is the afternoon", num3 + ":00.");
 } else {
-  console.log("GOOD ROLL");
+  console.log("It is either morning or night", num3 + ":00.");
 }
 
-/* Creating a check box */
-const myCheckbox = document.getElementById("Checkbox");
+// || (or) One condition must be true
+let num4 = Math.floor(Math.random() * 6 + 1);
+if (num4 == 1 || num4 == 6) {
+  console.log("Either a 1 or 6 :" + num4);
+} else {
+  console.log("One of these 2/3/4/5 :" + num4);
+}
+
+/* Creating a check box & selector*/
+const Checkbox = document.getElementById("Checkbox");
+const optionA = document.getElementById("optionA");
+const optionB = document.getElementById("optionB");
+const optionC = document.getElementById("optionC");
+
 document.getElementById("Submit").onclick = function () {
-  if (myCheckbox.checked) {
-    window.alert("You have agreed !");
-  } else {
-    window.alert("You need to agree...");
+  if (Checkbox.checked && optionA.checked) {
+    window.alert("AGREED & OPTION A");
+  } else if (Checkbox.checked && optionB.checked) {
+    window.alert("AGREED & OPTION B");
+  } else if (Checkbox.checked && optionC.checked) {
+    window.alert("AGREED & OPTION C");
+  } else if (Checkbox.checked) {
+    window.alert("AGREED but no option selected");
   }
 };
