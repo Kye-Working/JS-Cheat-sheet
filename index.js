@@ -6,7 +6,7 @@ console.log("The start of JavaScript.");
 console.log("\n");
 
 /*Creates an alert box within window*/
-window.alert("Testing alert box...");
+//window.alert("Testing alert box...");
 
 /*Variables*/
 /*(Declaration : var, let, const) (name) = (input)*/
@@ -136,6 +136,31 @@ document.getElementById("Reset-button").onclick = function () {
   document.getElementById("Count-label").innerHTML = count;
 };
 
+/* Switch */
+let num2 = Math.floor(Math.random() * 7 + 1);
+switch (num2) {
+  case 1:
+    console.log("You rolled a 1 !");
+    break;
+  case 2:
+    console.log("You rolled a 2 !");
+    break;
+  case 3:
+    console.log("You rolled a 3 !");
+    break;
+  case 4:
+    console.log("You rolled a 4 !");
+    break;
+  case 5:
+    console.log("You rolled a 5 !");
+    break;
+  case 6:
+    console.log("You rolled a 6 !");
+    break;
+  default:
+    console.log(num2 + "... a dice doesnt go that high ???");
+}
+
 /* IF statement */
 let num1 = Math.floor(Math.random() * 6 + 1);
 console.log("DICE :", num1);
@@ -146,3 +171,13 @@ if (num1 < 3) {
 } else {
   console.log("GOOD ROLL");
 }
+
+/* Creating a check box */
+const myCheckbox = document.getElementById("Checkbox");
+document.getElementById("Submit").onclick = function () {
+  if (myCheckbox.checked) {
+    window.alert("You have agreed !");
+  } else {
+    window.alert("You need to agree...");
+  }
+};
