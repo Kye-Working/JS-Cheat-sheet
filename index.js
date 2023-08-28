@@ -23,7 +23,7 @@ console.log("\n");
 
 /* User input */
 /* Window-box input */
-let username = window.prompt("Enter username :");
+let username = window.prompt("Enter a username :");
 console.log("Entered username :", username);
 console.log("\n");
 
@@ -198,6 +198,7 @@ if (!(num5 > 3)) {
 } else {
   console.log("Greater than 3 :", num5);
 }
+console.log("\n");
 
 /* Creating a check box & selector*/
 const Checkbox = document.getElementById("Checkbox");
@@ -219,3 +220,17 @@ document.getElementById("Submit").onclick = function () {
     window.alert("Please AGREE first before selecting an option.");
   }
 };
+
+/* While loops */
+/*Will keep prompting until a username is given or canceled*/
+while (username == "") {
+  username = window.prompt("Enter a username : ");
+}
+console.log("Greetings", username.toUpperCase());
+
+/* DO while loop */
+let password;
+do {
+  password = window.prompt("Enter a password");
+} while (password == "");
+console.log("Password :", password);
