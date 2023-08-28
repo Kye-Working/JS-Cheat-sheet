@@ -176,19 +176,27 @@ console.log("\n");
 
 /* AND & OR operators */
 let num3 = Math.floor(Math.random() * 24 + 1);
-// && (and) Both conditions must be true
+// && (and) : Both conditions must be true
 if (num3 > 12 && num3 < 18) {
   console.log("It is the afternoon", num3 + ":00.");
 } else {
   console.log("It is either morning or night", num3 + ":00.");
 }
 
-// || (or) One condition must be true
+// || (or) : One condition must be true
 let num4 = Math.floor(Math.random() * 6 + 1);
 if (num4 == 1 || num4 == 6) {
-  console.log("Either a 1 or 6 :" + num4);
+  console.log("Either a 1 or 6 :", num4);
 } else {
-  console.log("One of these 2/3/4/5 :" + num4);
+  console.log("One of these 2/3/4/5 :", num4);
+}
+
+/* NOT logical operator*/
+let num5 = Math.floor(Math.random() * 6 + 1);
+if (!(num5 > 3)) {
+  console.log("Either less than 3 or equal to 3 :", num5);
+} else {
+  console.log("Greater than 3 :", num5);
 }
 
 /* Creating a check box & selector*/
@@ -198,6 +206,7 @@ const optionB = document.getElementById("optionB");
 const optionC = document.getElementById("optionC");
 
 document.getElementById("Submit").onclick = function () {
+  /*Must go in order of most specific case*/
   if (Checkbox.checked && optionA.checked) {
     window.alert("AGREED & OPTION A");
   } else if (Checkbox.checked && optionB.checked) {
@@ -206,5 +215,7 @@ document.getElementById("Submit").onclick = function () {
     window.alert("AGREED & OPTION C");
   } else if (Checkbox.checked) {
     window.alert("AGREED but no option selected");
+  } else if (!Checkbox.checked) {
+    window.alert("Please AGREE first before selecting an option.");
   }
 };
