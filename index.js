@@ -234,3 +234,22 @@ do {
   password = window.prompt("Enter a password");
 } while (password == "");
 console.log("Password :", password);
+console.log("\n");
+
+/* For loop */
+for (let i = 1; i <= 4; i += 1) {
+  console.log("Numbers...", i);
+}
+console.log("\n");
+
+/* Break & Continue */
+for (let i = 1; i <= 8; i += 1) {
+  if (i == 5) {
+    /*continue : Skips the iteration when permeters meet*/
+    continue;
+  } else if (i == 7) {
+    /*break : Ends the loop when permeters meet*/
+    break;
+  }
+  console.log("Counting...", i);
+}
