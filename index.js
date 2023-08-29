@@ -242,6 +242,17 @@ for (let i = 1; i <= 4; i += 1) {
 }
 console.log("\n");
 
+/* Nested loop */
+let rows = window.prompt("Enter number of rows :");
+let columns = window.prompt("Enter number of columns :");
+
+for (let i = 1; i <= rows; i += 1) {
+  for (let j = 1; j <= columns; j += 1) {
+    document.getElementById("Rectangle").innerHTML += "[ ]";
+  }
+  document.getElementById("Rectangle").innerHTML += "<br>";
+}
+
 /* Break & Continue */
 for (let i = 1; i <= 8; i += 1) {
   if (i == 5) {
