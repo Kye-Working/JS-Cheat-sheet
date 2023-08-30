@@ -264,3 +264,26 @@ for (let i = 1; i <= 8; i += 1) {
   }
   console.log("Counting...", i);
 }
+console.log("\n");
+
+/*Functions*/
+let randomLocation = "UK";
+
+function HELLO() {
+  let randomName = "RANDY";
+  let randomAge = 41;
+  GREET(randomName, randomAge);
+}
+/*Varibles within functions must be added to the brackets of other functions*/
+function GREET(randomName, randomAge) {
+  console.log(
+    "HELLO",
+    randomName,
+    "IS AGED",
+    randomAge,
+    "FROM",
+    randomLocation
+  );
+}
+
+HELLO();
