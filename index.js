@@ -287,3 +287,18 @@ function GREET(randomName, randomAge) {
 }
 
 HELLO();
+console.log("\n");
+
+/* Return */
+let area;
+let width = Math.floor(Math.random() * 5 + 1);
+let height = Math.floor(Math.random() * 5 + 1);
+
+area = getArea(width, height);
+
+function getArea() {
+  let theArea = width * height;
+  /*return : specifies a value being returned to function caller*/
+  return theArea;
+}
+console.log("Area :", area);
