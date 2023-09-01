@@ -314,3 +314,13 @@ Drink(num6);
 function Drink(num6) {
   num6 >= 18 ? console.log("You can drink") : console.log("You can't drink");
 }
+console.log("\n");
+
+/* Var variable */
+function getData() {
+  /*var limited to the function*/
+  var num7 = Math.floor(Math.random() * 30 + 1);
+  return num7;
+}
+/*var shouldn't normally be used as a global varible*/
+console.log("The number is :", getData());
