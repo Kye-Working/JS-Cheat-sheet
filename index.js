@@ -324,3 +324,28 @@ function getData() {
 }
 /*var shouldn't normally be used as a global varible*/
 console.log("The number is :", getData());
+console.log("\n");
+
+/* Template literals */
+let item1 = "Chocolate";
+let item2 = 24;
+let item3 = true;
+
+/*using `` allows for inbredded varibles with ${}*/
+let text1 = `Here are some varibles ${item1}, ${item2}, ${item3}`;
+console.log(text1);
+
+/* toLocaleString */
+/*Returns string with langauge sensitive representation of number*/
+let num8 = 34084.2342;
+num8 = num8.toLocaleString("en-US", { style: "currency", currency: "USD" });
+console.log(num8);
+let num9 = 23231432.45452;
+num9 = num9.toLocaleString("hi-IN", { style: "currency", currency: "INR" });
+console.log(num9);
+let num10 = 0.15;
+num10 = num10.toLocaleString(undefined, { style: "percent" });
+console.log(num10);
+let num11 = 64;
+num11 = num11.toLocaleString(undefined, { style: "unit", unit: "celsius" });
+console.log(num11);
