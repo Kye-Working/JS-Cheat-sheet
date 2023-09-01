@@ -298,7 +298,19 @@ area = getArea(width, height);
 
 function getArea() {
   let theArea = width * height;
-  /*return : specifies a value being returned to function caller*/
+  /*return : specifies the value being returned to function caller*/
   return theArea;
 }
 console.log("Area :", area);
+console.log("\n");
+
+/* Ternary operator */
+let num6 = Math.floor(Math.random() * 30 + 1);
+/*? used like if else (Condition ? (if outcome) : (else outcome))*/
+let anAdult = num6 >= 18 ? "Above 18" : "Below 18";
+console.log(num6, anAdult);
+
+Drink(num6);
+function Drink(num6) {
+  num6 >= 18 ? console.log("You can drink") : console.log("You can't drink");
+}
