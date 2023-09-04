@@ -335,7 +335,7 @@ let item3 = true;
 let text1 = `Here are some varibles ${item1}, ${item2}, ${item3}`;
 console.log(text1);
 
-/* toLocaleString */
+/* Formatting values */
 /*Returns string with langauge sensitive representation of number*/
 let num8 = 34084.2342;
 num8 = num8.toLocaleString("en-US", { style: "currency", currency: "USD" });
@@ -349,3 +349,27 @@ console.log(num10);
 let num11 = 64;
 num11 = num11.toLocaleString(undefined, { style: "unit", unit: "celsius" });
 console.log(num11);
+console.log("\n");
+
+/* Array */
+/*Arrays can store multiple variables*/
+let fruits = ["Apple", "Pear", "Mango"];
+console.log(fruits);
+
+/*Adds and element*/
+fruits.push("Orange");
+fruits.push("Potato");
+/*Removes last element (Potato in this case)*/
+fruits.pop();
+/*Adds element to beginning*/
+fruits.unshift("Lemon");
+fruits.unshift("Peas");
+/*Removes element from beginning (Peas in this case)*/
+fruits.shift();
+console.log(fruits);
+
+let length = fruits.length;
+console.log(`Number of variables : ${length}`);
+let index = fruits.indexOf("Pear");
+/*always starts from 0 then 1,2,3...*/
+console.log(`Index number of Pear : ${index}`);
