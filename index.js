@@ -353,7 +353,7 @@ console.log("\n");
 
 /* Array */
 /*Arrays can store multiple variables*/
-let fruits = ["Apple", "Pear", "Mango"];
+let fruits = ["Pear", "Apple", "Mango"];
 console.log(fruits);
 
 /*Adds and element*/
@@ -373,3 +373,24 @@ console.log(`Number of variables : ${length}`);
 let index = fruits.indexOf("Pear");
 /*always starts from 0 then 1,2,3...*/
 console.log(`Index number of Pear : ${index}`);
+console.log("\n");
+
+/*Looping through an arrays*/
+for (let i = 0; i < fruits.length; i += 1) {
+  console.log(`${i + 1} : ${fruits[i]}`);
+}
+console.log("\n");
+
+for (let fruit of fruits) {
+  console.log(fruit);
+}
+console.log("\n");
+
+/*Sorting array of strings*/
+/*.sort : sorts them in alphabetical order*/
+/*.reverse : Used to reverse the order*/
+fruits = fruits.sort().reverse();
+
+for (let fruit of fruits) {
+  console.log(fruit);
+}
