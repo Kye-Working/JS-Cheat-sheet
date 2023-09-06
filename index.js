@@ -285,7 +285,6 @@ function GREET(randomName, randomAge) {
     randomLocation
   );
 }
-
 HELLO();
 console.log("\n");
 
@@ -354,7 +353,7 @@ console.log("\n");
 /* Array */
 /*Arrays can store multiple variables*/
 let fruits = ["Pear", "Apple", "Mango"];
-console.log(fruits);
+console.log(...fruits);
 
 /*Adds and element*/
 fruits.push("Orange");
@@ -387,10 +386,62 @@ for (let fruit of fruits) {
 console.log("\n");
 
 /*Sorting array of strings*/
-/*.sort : sorts them in alphabetical order*/
-/*.reverse : Used to reverse the order*/
+/*.sort() : sorts them in alphabetical order*/
+/*.reverse() : Used to reverse the order*/
 fruits = fruits.sort().reverse();
 
 for (let fruit of fruits) {
   console.log(fruit);
 }
+console.log("\n");
+
+/*2D Array*/
+let meats = ["Beef", "Chicken", "Turkey"];
+let fishes = ["Cod", "Sardine", "Tuna"];
+let dairys = ["Milk", "Yogurt", "Butter"];
+
+let foodList = [meats, fishes, dairys];
+
+/*Arrange like a grid ([1][0] in this case is Cod)*/
+console.log(`The item is : ${foodList[1][0]}`);
+console.log("\n");
+
+/*items can be changed similarly to (in this case now steak will be first)*/
+foodList[0][0] = "Steak";
+
+/*Goes through array of arrays*/
+for (let foods of foodList) {
+  /*Goes through specific array*/
+  for (let food of foods) {
+    console.log(food);
+  }
+}
+console.log("\n");
+
+/*Spread operator*/
+/*... : Unpacks elements into individual pieces*/
+let car = "bugatti";
+
+let cars = ["SUV", "Coupe", "Sedan"];
+console.log(...cars);
+
+let moreCars = ["Crossover", "Minivan"];
+/*Will insert the array not the individual cars*/
+cars.push(moreCars);
+console.log("Without ... : ", cars);
+cars.pop(moreCars);
+/*Unpacks and adds each car from the array into the other array*/
+cars.push(...moreCars);
+console.log("With ... : ", cars);
+console.log("\n");
+
+let num12 = [1, 4, 8, 64, 50, 9, 3];
+/*... unpacks them into individual elements and .max() checks each one*/
+let maxNum = Math.max(...num12);
+console.log(`Max num of array : ${maxNum}`);
+
+let num13 = [33, 487, 101, 8];
+num12.push(...num13);
+console.log(num12);
+maxNum = Math.max(...num12);
+console.log(`New max num of array : ${maxNum}`);
