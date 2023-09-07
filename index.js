@@ -421,6 +421,7 @@ console.log("\n");
 /*Spread operator*/
 /*... : Unpacks elements into individual pieces*/
 let car = "bugatti";
+console.log(...car);
 
 let cars = ["SUV", "Coupe", "Sedan"];
 console.log(...cars);
@@ -445,3 +446,23 @@ num12.push(...num13);
 console.log(num12);
 maxNum = Math.max(...num12);
 console.log(`New max num of array : ${maxNum}`);
+console.log("\n");
+
+/*Rest parameter*/
+/*... can be used to pack arguments into an array*/
+let d = 1;
+let e = 5;
+let f = 23;
+
+console.log(`Total of varibles : ${total1(d, e, f, 6, 9)}`);
+
+/*Allows for unspecific amount of varibles to be used*/
+/*... must be last perameter if mixing parameter*/
+function total1(d, ...numbers) {
+  let total = 0;
+  total += d;
+  for (let number of numbers) {
+    total += number;
+  }
+  return total;
+}
