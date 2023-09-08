@@ -466,3 +466,17 @@ function total1(d, ...numbers) {
   }
   return total;
 }
+console.log("\n");
+
+/*Callback*/
+/*Function passed as an argument in another function*/
+total2(4, 6, displayConsole);
+
+function total2(x, y, callback) {
+  let result = x + y;
+  callback(result);
+}
+
+function displayConsole(output) {
+  console.log(`The result is : ${output}`);
+}
