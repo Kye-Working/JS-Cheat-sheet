@@ -470,13 +470,28 @@ console.log("\n");
 
 /*Callback*/
 /*Function passed as an argument in another function*/
-total2(4, 6, displayConsole);
+total2(4, 6, displayConsole1);
 
 function total2(x, y, callback) {
   let result = x + y;
   callback(result);
 }
 
-function displayConsole(output) {
+function displayConsole1(output) {
   console.log(`The result is : ${output}`);
+}
+console.log("\n");
+
+/*.forEach()*/
+/*Excutes callback function for each individual array element*/
+let student2 = ["dave", "ryan", "dax"];
+student2.forEach(cap);
+student2.forEach(print);
+
+function cap(element, index, array) {
+  array[index] = element.toUpperCase();
+}
+
+function print(element) {
+  console.log(element);
 }
