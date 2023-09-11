@@ -498,7 +498,7 @@ num14.forEach(value3);
 function value3(element, index, array) {
   array[index] = element + 1;
 }
-console.log(...num14);
+console.log(`The values : ${num14}`);
 
 let student2 = ["dave", "ryan", "dax"];
 student2.forEach(cap);
@@ -511,3 +511,14 @@ function cap(element, index, array) {
 function print(element) {
   console.log(element);
 }
+console.log("\n");
+
+/*array.map()*/
+let num15 = [3, 5, 4, 8, 13];
+let num15Squared = num15.map(square);
+
+function square(element) {
+  return Math.pow(element, 2);
+}
+
+console.log(...num15Squared);
