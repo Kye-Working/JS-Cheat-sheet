@@ -483,7 +483,23 @@ function displayConsole1(output) {
 console.log("\n");
 
 /*.forEach()*/
-/*Excutes callback function for each individual array element*/
+/*Goes through each individual array element (Callback function)*/
+let totalCheckout = 0;
+let cart = [2, 6, 13];
+cart.forEach(checkout);
+function checkout(element) {
+  totalCheckout += element;
+}
+console.log(`Total checkout cost : ${totalCheckout}`);
+
+let num14 = [22, 33, 88];
+num14.forEach(value3);
+/*The array[index] is needed to access the array for changes to each elements*/
+function value3(element, index, array) {
+  array[index] = element + 1;
+}
+console.log(...num14);
+
 let student2 = ["dave", "ryan", "dax"];
 student2.forEach(cap);
 student2.forEach(print);
