@@ -556,3 +556,22 @@ function checkOut(accumulator, element) {
 }
 
 console.log(`Total of values : ${accumulator}`);
+console.log("\n");
+
+/*Sorting array of numbers*/
+let marks1 = [67, 36, 88, 6, 22];
+marks1 = marks1.sort(ascendingOrder);
+/*Having the first varible - second varible makes it ascending order*/
+function ascendingOrder(a, b) {
+  return a - b;
+}
+console.log(`Marks 1 (ascending) : ${marks1}`);
+
+/*Sorting array of numbers*/
+let marks2 = [2, 44, 23, 96, 20];
+marks2 = marks2.sort(descendingOrder);
+/*Having the first varible - second varible makes it ascending order*/
+function descendingOrder(a, b) {
+  return b - a;
+}
+console.log(`Marks 2 (descending) : ${marks2}`);
