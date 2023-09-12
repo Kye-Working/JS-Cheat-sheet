@@ -274,7 +274,8 @@ function HELLO() {
   let randomAge = 41;
   GREET(randomName, randomAge);
 }
-/*Varibles within functions must be added to the brackets of other functions*/
+/*Varibles within functions must be added to 
+the brackets of other functions*/
 function GREET(randomName, randomAge) {
   console.log(
     "HELLO",
@@ -406,7 +407,8 @@ let foodList = [meats, fishes, dairys];
 console.log(`The item is : ${foodList[1][0]}`);
 console.log("\n");
 
-/*items can be changed similarly to (in this case now steak will be first)*/
+/*items can be changed similarly too 
+(in this case now steak will be first)*/
 foodList[0][0] = "Steak";
 
 /*Goes through array of arrays*/
@@ -437,7 +439,8 @@ console.log("With ... : ", cars);
 console.log("\n");
 
 let num12 = [1, 4, 8, 64, 50, 9, 3];
-/*... unpacks them into individual elements and .max() checks each one*/
+/*... unpacks them into individual elements 
+and .max() checks each one*/
 let maxNum = Math.max(...num12);
 console.log(`Max num of array : ${maxNum}`);
 
@@ -483,7 +486,8 @@ function displayConsole1(output) {
 console.log("\n");
 
 /*.forEach()*/
-/*Goes through each individual array element (Callback function)*/
+/*Goes through each individual array 
+element (Callback function)*/
 let totalCheckout = 0;
 let cart = [2, 6, 13];
 cart.forEach(checkout);
@@ -494,7 +498,9 @@ console.log(`Total checkout cost : ${totalCheckout}`);
 
 let num14 = [22, 33, 88];
 num14.forEach(value3);
-/*The array[index] is needed to access the array for changes to each elements*/
+
+/*The array[index] is needed to access the 
+array for changes to each elements*/
 function value3(element, index, array) {
   array[index] = element + 1;
 }
@@ -514,6 +520,8 @@ function print(element) {
 console.log("\n");
 
 /*array.map()*/
+/*executes provided callback function once for 
+each array element & creates a new array*/
 let num15 = [3, 5, 4, 8, 13];
 let num15Squared = num15.map(square);
 
@@ -521,4 +529,30 @@ function square(element) {
   return Math.pow(element, 2);
 }
 
-console.log(...num15Squared);
+console.log(`Squared array : ${num15Squared}`);
+console.log("\n");
+
+/*array.filter()*/
+/*Creates a new array with all elements
+that pass the test function provided*/
+
+let ages = [12, 24, 16, 33, 23];
+let adultAges = ages.filter(ageCheck);
+
+function ageCheck(element) {
+  return element >= 18;
+}
+
+console.log(`Adults ages : ${adultAges}`);
+console.log("\n");
+
+/*array.reduce()*/
+/*Reduces array to a single value*/
+let values1 = [2, 22, 14, 5, 4];
+let accumulator = values1.reduce(checkOut);
+
+function checkOut(accumulator, element) {
+  return accumulator + element;
+}
+
+console.log(`Total of values : ${accumulator}`);
