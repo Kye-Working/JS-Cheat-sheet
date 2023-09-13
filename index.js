@@ -119,22 +119,21 @@ let count = 0;
 /* document : Used for excuting code on web pages */
 /* .getElementById : Returns ID */
 /* .onclick : Excutes function when clicked */
-/* function(){} : A set of statements that preforms a task */
-document.getElementById("Up-button").onclick = function () {
+/* function x() {} : A set of statements that preforms a task */
+function increaseCount() {
   count += 1;
-  /* innerHTML : Used to get/change elements in HTML */
   document.getElementById("Count-label").innerHTML = count;
-};
+}
 
-document.getElementById("Down-button").onclick = function () {
+function decreaseCount() {
   count -= 1;
   document.getElementById("Count-label").innerHTML = count;
-};
+}
 
-document.getElementById("Reset-button").onclick = function () {
+function resetCount() {
   count = 0;
   document.getElementById("Count-label").innerHTML = count;
-};
+}
 
 /* IF statement */
 let num1 = Math.floor(Math.random() * 6 + 2);
@@ -575,3 +574,41 @@ function descendingOrder(a, b) {
   return b - a;
 }
 console.log(`Marks 2 (descending) : ${marks2}`);
+console.log("\n");
+
+/*Anonymous function expression*/
+/*A function without a name to avoid polluting
+the global scope*/
+let count2 = 0;
+document.getElementById("Up-button2").onclick = function () {
+  count2 += 1;
+  document.getElementById("Count-label2").innerHTML = count2;
+};
+
+/*Arrow function*/
+/*Compact version of a traditional function*/
+const greetings2 = (username) => console.log(`Hello again ${username}`);
+greetings2(username);
+const total3 = (x, y) => x + y;
+console.log(`Total 1 : ${total3(10, 25)}`);
+
+/*{} are needed if function has more than 1 statement*/
+/*return should be used when something specific from mulitple statements
+is needed to be returned*/
+const total4 = (x, y) => {
+  x = x * 2;
+  x = x + y;
+  return x;
+};
+console.log(`Total 2 : ${total4(36, 12)}`);
+console.log("\n");
+
+let marks3 = [22, 53, 42, 93, 34];
+marks3.sort((x, y) => y - x);
+marks3.forEach((element) => console.log("Mark :", element));
+console.log("\n");
+
+document.getElementById("Down-button2").onclick = () => {
+  count2 -= 1;
+  document.getElementById("Count-label2").innerHTML = count2;
+};
