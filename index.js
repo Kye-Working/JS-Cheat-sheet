@@ -608,7 +608,28 @@ marks3.sort((x, y) => y - x);
 marks3.forEach((element) => console.log("Mark :", element));
 console.log("\n");
 
+/*Down button using => function*/
 document.getElementById("Down-button2").onclick = () => {
   count2 -= 1;
   document.getElementById("Count-label2").innerHTML = count2;
 };
+
+/*Shuffling array (COME BACK TO)*/
+let letters = [];
+
+console.log(letters);
+console.log("\n");
+
+/*Nested functions*/
+/*Functions inside other functions*/
+login();
+function login() {
+  displayname();
+  displayMSG();
+}
+function displayname() {
+  console.log(username);
+}
+function displayMSG() {
+  console.log("WELCOME BACK !");
+}
