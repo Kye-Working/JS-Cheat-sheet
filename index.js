@@ -615,9 +615,31 @@ document.getElementById("Down-button2").onclick = () => {
 };
 
 /*Shuffling array (COME BACK TO)*/
-let letters = [];
+let letters = ["A", "B", "C", "D", "E", "F"];
+shuffle(letters);
+
+function shuffle(array) {
+  /* Concept : Array is shifting around itself 
+  around until it reaches index 0 */
+  let currentIndex = array.length;
+  while (currentIndex != 0) {
+    /*genrates number between 0-1 * array.length then rounds down*/
+    let randomIndex = Math.floor(Math.random() * array.length);
+    currentIndex -= 1;
+
+    /*temp holds the orginal letter at array[currentIndex]*/
+    let temp = array[currentIndex];
+    /*Switches the letter at array[currentIndex]
+    with the letter at array[randomIndex]*/
+    array[currentIndex] = array[randomIndex];
+    /*This makes the Letter at array[randomIndex]
+    the letter that array[currentIndex] orginally was*/
+    array[randomIndex] = temp;
+  }
+}
 
 console.log(letters);
+document.getElementById("theLetters").innerHTML = letters;
 console.log("\n");
 
 /*Nested functions*/
