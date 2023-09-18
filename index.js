@@ -655,3 +655,29 @@ function displayname() {
 function displayMSG() {
   console.log("WELCOME BACK !");
 }
+console.log("\n");
+
+/*Map*/
+/*Holds key-value pairs of any data type 
+  (Does not allow duplicate keys)*/
+const deck = new Map([
+  ["A", 1],
+  ["B", 2],
+  ["C", 3],
+  ["D", 4],
+  ["E", 5],
+]);
+
+/*.set() adds a pair*/
+deck.set("F", 6);
+deck.delete("B", 1);
+
+console.log(`Is there a "B" : ${deck.has("B")}`);
+console.log(`How many pairs in the map : ${deck.size}`);
+
+deck.forEach((value, key) => console.log(`${key} | ${value}`));
+
+let total5 = 0;
+total5 += deck.get("F");
+total5 += deck.get("D");
+console.log(`Total of selected items (F & D) : ${total5}`);
