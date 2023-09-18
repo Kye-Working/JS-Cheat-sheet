@@ -681,3 +681,23 @@ let total5 = 0;
 total5 += deck.get("F");
 total5 += deck.get("D");
 console.log(`Total of selected items (F & D) : ${total5}`);
+console.log("\n");
+
+/*Objects*/
+/*A group of properties & methods*/
+const vechical = {
+  type: "car",
+  numWheels: 4,
+  maxSpeed: 100,
+
+  VechicalGO: function () {
+    console.log("The vechical begins moving");
+  },
+  VechicalSTOP: () => {
+    console.log("The vechical has stopped");
+  },
+};
+
+console.log(`${vechical.type} || top speed : ${vechical.maxSpeed}`);
+vechical.VechicalGO();
+vechical.VechicalSTOP();
