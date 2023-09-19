@@ -685,7 +685,7 @@ console.log("\n");
 
 /*Objects*/
 /*A group of properties & methods*/
-const vechical = {
+const vechical1 = {
   type: "car",
   numWheels: 4,
   maxSpeed: 100,
@@ -693,11 +693,33 @@ const vechical = {
   VechicalGO: function () {
     console.log("The vechical begins moving");
   },
-  VechicalSTOP: () => {
-    console.log("The vechical has stopped");
+  VechicalSTOP: function () {
+    console.log(`The ${this.type} has stopped`);
   },
 };
 
-console.log(`${vechical.type} || top speed : ${vechical.maxSpeed}`);
-vechical.VechicalGO();
-vechical.VechicalSTOP();
+console.log(`${vechical1.type} || top speed : ${vechical1.maxSpeed}`);
+vechical1.VechicalGO();
+console.log("\n");
+
+/*.this*/
+/*used to refer to a particular object,
+the object depends on the immediate context*/
+const vechical2 = {
+  type: "bike",
+  numWheels: 2,
+  maxSpeed: 15,
+
+  VechicalGO: function () {
+    console.log("The vechical begins moving");
+  },
+  VechicalSTOP: function () {
+    /*this. refers to the object currently being worked with
+    (in this case vechical2)*/
+    console.log(`The ${this.type} has stopped `);
+  },
+};
+
+vechical1.VechicalSTOP();
+vechical2.VechicalSTOP();
+console.log("\n");
