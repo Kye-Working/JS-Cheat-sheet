@@ -780,3 +780,35 @@ console.log(`Current marks : ${studentA.marks4} | ${studentB.marks4}`);
 studentA.study();
 studentB.sleep();
 console.log("\n");
+
+/*Static keyword*/
+/*Belongs to the class not the objects*/
+class someCars {
+  /*Without static each type of car has its own copy */
+  totalCarsA = 0;
+  /*static makes the class have the only copy*/
+  static totalCarsB = 0;
+  constructor(type) {
+    this.type = type;
+    this.totalCarsA += 1;
+    /*its stored in the class*/
+    someCars.totalCarsB += 1;
+  }
+  static startRace() {
+    console.log("3,2,1... Go!");
+  }
+}
+
+const car1 = new someCars("Ford");
+const car2 = new someCars("Mini");
+const car3 = new someCars("Fiesta");
+
+console.log(`without static : ${car1.totalCarsA}`);
+console.log(`without static : ${car3.totalCarsA}`);
+/*Must call the class as its stored 
+within the class not within each object*/
+console.log(`with STATIC : ${someCars.totalCarsB}`);
+
+/*Object cannot use the static function either
+acts as a utility function of sorts*/
+someCars.startRace();
