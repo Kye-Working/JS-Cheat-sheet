@@ -749,3 +749,34 @@ console.log(`Player score : ${player2.score}`);
 
 player1.pause();
 player1.exit();
+console.log("\n");
+
+/*Constructor*/
+/*a special method of a class, 
+accepts arguments and assign properties*/
+class student3 {
+  /*Permeters*/
+  constructor(name, age, marks4) {
+    /*Properties of this class*/
+    this.name = name;
+    this.age = age;
+    this.marks4 = marks4;
+  }
+
+  study() {
+    console.log(`${this.name} is studying`);
+  }
+  sleep() {
+    console.log(`${this.name} is sleeping`);
+  }
+}
+
+/*Permeters must be passed through*/
+const studentA = new student3("Kyle", 28, 53);
+const studentB = new student3("Brian", 31, 68);
+
+console.log(`${studentA.name} | ${studentB.name}`);
+console.log(`Current marks : ${studentA.marks4} | ${studentB.marks4}`);
+studentA.study();
+studentB.sleep();
+console.log("\n");
