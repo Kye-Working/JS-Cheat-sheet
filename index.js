@@ -723,3 +723,29 @@ const vechical2 = {
 vechical1.VechicalSTOP();
 vechical2.VechicalSTOP();
 console.log("\n");
+
+/*Class*/
+/*a template for creating objects*/
+/*defines the structure & behavior of objects
+that will be created in the class*/
+class player {
+  score = 0;
+
+  pause() {
+    console.log("GAME PAUSED");
+  }
+  exit() {
+    console.log("EXITING GAME...");
+  }
+}
+
+const player1 = new player();
+const player2 = new player();
+
+player1.score += 100;
+console.log(`Player score : ${player1.score}`);
+player2.score += 500;
+console.log(`Player score : ${player2.score}`);
+
+player1.pause();
+player1.exit();
