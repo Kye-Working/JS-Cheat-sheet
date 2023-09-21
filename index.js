@@ -812,3 +812,49 @@ console.log(`with STATIC : ${someCars.totalCarsB}`);
 /*Object cannot use the static function either
 acts as a utility function of sorts*/
 someCars.startRace();
+console.log("\n");
+
+/*Inheritence*/
+/*a child class can inherit all the methods and propertises 
+from another class (parent class)*/
+/*Adult class*/
+class Animal {
+  alive = true;
+  eat() {
+    console.log(`${this.name} is eatting...`);
+  }
+  sleep() {
+    console.log(`${this.name} is sleeping...`);
+  }
+}
+/*Child class*/
+/*exstends is used to allow the child class to inherit
+the methods and propertises of the adult class*/
+class Dog extends Animal {
+  name = "Dog";
+  run() {
+    console.log(`${this.name} is runnning!`);
+  }
+}
+class Fish extends Animal {
+  name = "Fish";
+  swim() {
+    console.log(`${this.name} is swimming.`);
+  }
+}
+class Bird extends Animal {
+  name = "Bird";
+  flying() {
+    console.log(`${this.name} is flying.`);
+  }
+}
+
+const dog = new Dog();
+const fish = new Fish();
+const bird = new Bird();
+
+console.log(`Alive status : ${dog.alive}`);
+dog.run();
+fish.eat();
+fish.swim();
+bird.sleep();
