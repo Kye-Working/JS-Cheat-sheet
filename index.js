@@ -858,3 +858,30 @@ dog.run();
 fish.eat();
 fish.swim();
 bird.sleep();
+console.log("\n");
+
+/*super*/
+/*refers to parent class & commonly used 
+to envoke constructors of the parent class*/
+class differentCars {
+  constructor(name, color) {
+    this.name = name;
+    this.color = color;
+  }
+}
+
+class FORD extends differentCars {
+  constructor(name, color) {
+    super(name, color);
+  }
+}
+class MINI extends differentCars {
+  constructor(name, color) {
+    super(name, color);
+  }
+}
+
+const Ford = new FORD("Ford", "Blue");
+const Mini = new MINI("Mini", "Green");
+console.log(`The ${Ford.name} is ${Ford.color}`);
+console.log(`The ${Mini.name} is ${Mini.color}`);
