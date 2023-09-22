@@ -885,3 +885,37 @@ const Ford = new FORD("Ford", "Blue");
 const Mini = new MINI("Mini", "Green");
 console.log(`The ${Ford.name} is ${Ford.color}`);
 console.log(`The ${Mini.name} is ${Mini.color}`);
+console.log("\n");
+
+/*getters & setters*/
+/*get : binds an object property to a function
+when that proprty is accesssed*/
+/*set : binds an object property to a function
+when that property is assigned a value*/
+class character {
+  constructor(name, health) {
+    /*_ in front of name means its protected 
+    and shouldnt be messed with*/
+    this._name = name;
+    this._health = health;
+  }
+  get name() {
+    return `Username : ${this._name}`;
+  }
+  get health() {
+    return `${this._health} / 100 HP`;
+  }
+  set health(value) {
+    this._health = value;
+  }
+}
+
+let Brian = new character("Brian", 100);
+/*This(in thie case username) will not change 
+the value as its protected*/
+Brian.name = "RYAN";
+console.log(`${Brian.name}`);
+console.log(`${Brian.health}`);
+console.log(`! Player hit -10hp !`);
+Brian.health = 90;
+console.log(`${Brian.health}`);
