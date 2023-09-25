@@ -893,25 +893,36 @@ when that proprty is accesssed*/
 /*set : binds an object property to a function
 when that property is assigned a value*/
 class character {
-  constructor(name, health) {
+  constructor(name, health, mana) {
     /*_ in front of name means its protected 
     and shouldnt be messed with*/
     this._name = name;
     this._health = health;
+    this._mana = mana;
   }
   get name() {
-    return `Username : ${this._name}`;
+    return `${this._name}`;
   }
   get health() {
-    return `${this._health} / 100 HP`;
+    return `${this._health} HP`;
+  }
+  get mana() {
+    return `${this._mana} MP`;
   }
   set health(value) {
     this._health = value;
   }
+  set mana(value) {
+    this._mana = value;
+  }
+  greeting() {
+    console.log(`Greetins hero ${this.name}!`);
+  }
 }
 
-let Brian = new character("Brian", 100);
-/*This(in thie case username) will not change 
+const Brian = new character("Brian", 100, 100);
+
+/*This(in this case "username") will not change 
 the value as its protected*/
 Brian.name = "RYAN";
 console.log(`${Brian.name}`);
@@ -919,3 +930,38 @@ console.log(`${Brian.health}`);
 console.log(`! Player hit -10hp !`);
 Brian.health = 90;
 console.log(`${Brian.health}`);
+console.log("\n");
+
+/*Objects as arguments*/
+const Rhiana = new character("Rhiana", 75, 150);
+
+manaUpdate(Rhiana, 150);
+displayCharacter(Rhiana);
+
+function displayCharacter(character) {
+  console.log(character.name);
+  console.log(character.health);
+  console.log(character.mana);
+}
+
+function manaUpdate(character, newMana) {
+  character.mana = newMana;
+}
+console.log("\n");
+
+/*Array of objects*/
+const Terry = new character("Terry", 140, 60);
+
+const characters = [Brian, Rhiana, Terry];
+console.log(characters[0].name, characters[0].health);
+console.log(characters[1].name, characters[1].health);
+console.log(characters[2].name, characters[2].health);
+characters[0].greeting();
+console.log("\n");
+
+greetHeros(characters);
+function greetHeros(characters) {
+  for (const character of characters) {
+    character.greeting();
+  }
+}
