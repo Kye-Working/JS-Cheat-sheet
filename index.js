@@ -965,3 +965,25 @@ function greetHeros(characters) {
     character.greeting();
   }
 }
+console.log("\n");
+
+/*Anonymous objects*/
+/*Objects without names*/
+class storeItems {
+  constructor(item, value) {
+    this.item = item;
+    this.value = value;
+  }
+}
+
+/*Cant directly access object via name*/
+const items = [
+  new storeItems("Apple", 1),
+  new storeItems("Banana", 0.55),
+  new storeItems("Orange", 0.75),
+  new storeItems("Pear", 1.2),
+];
+
+items.forEach((Ranitem) => console.log(`${Ranitem.item} is $${Ranitem.value}`));
+
+console.log("\n");
