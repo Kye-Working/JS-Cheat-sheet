@@ -987,3 +987,21 @@ const items = [
 items.forEach((Ranitem) => console.log(`${Ranitem.item} is $${Ranitem.value}`));
 
 console.log("\n");
+
+/*error*/
+/*object with a desciption something went wrong*/
+/*throw*/
+/*excutes user defined error*/
+try {
+  let randomNUMBER = window.prompt("Enter a random NUMBER:");
+  randomNUMBER = Number(randomNUMBER);
+  /*if this is true throw this as the error*/
+  if (isNaN(randomNUMBER)) throw "That's NOT a RANDOM number";
+  if (randomNUMBER == "") throw "You didn't write a RANDOM number";
+  console.log(`Random NUMBER : ${randomNUMBER}`);
+} catch (error) {
+  /*if something goes wrong do something else*/
+  console.log(error);
+} /*excute something even if error (For clean up)*/ finally {
+  console.log("Cleaning up RANDOM number test...");
+}
