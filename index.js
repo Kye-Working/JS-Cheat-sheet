@@ -1005,3 +1005,23 @@ try {
 } /*excute something even if error (For clean up)*/ finally {
   console.log("Cleaning up RANDOM number test...");
 }
+
+/*setTimeout()*/
+/*Sets timer on when function should excute*/
+let timer1 = setTimeout(Popup1, 4500);
+let timer2 = setTimeout(Popup2, 6500);
+
+function Popup1() {
+  alert("RANDOM POP UP !");
+}
+
+function Popup2() {
+  alert("ANOTHER POP UP ?");
+}
+
+document.getElementById("Popup").onclick = function () {
+  /*Cancel and clear setTimout methods*/
+  clearTimeout(timer1);
+  clearTimeout(timer2);
+  alert("THEY HAVE BEEN STOPPED... ?");
+};
