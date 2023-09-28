@@ -1007,16 +1007,17 @@ try {
 }
 
 /*setTimeout()*/
-/*Sets timer on when function should excute*/
-let timer1 = setTimeout(Popup1, 4500);
-let timer2 = setTimeout(Popup2, 6500);
+/*invokes function after a period of time*/
+let aMSG1 = "WHY...";
+let timer1 = setTimeout(Popup1, 4500, aMSG1);
+let timer2 = setTimeout(Popup2, 6500, aMSG1);
 
 function Popup1() {
-  alert("RANDOM POP UP !");
+  alert(`RANDOM POP UP ! ${aMSG1}`);
 }
 
 function Popup2() {
-  alert("ANOTHER POP UP ?");
+  alert(`ANOTHER POP UP ! ${aMSG1}`);
 }
 
 document.getElementById("Popup").onclick = function () {
@@ -1025,3 +1026,18 @@ document.getElementById("Popup").onclick = function () {
   clearTimeout(timer2);
   alert("THEY HAVE BEEN STOPPED... ?");
 };
+
+/*setInterval()*/
+/*invokes function after period of time repeatedly*/
+/*Varible must be before setInterval otherwise reverts
+back to the orginal number each rotation*/
+let count3 = 4;
+
+const myTimer = setInterval(countDown, 3000);
+function countDown() {
+  count3 -= 1;
+  alert(`${count3}...`);
+  if (count3 == 1) {
+    clearInterval(myTimer);
+  }
+}
