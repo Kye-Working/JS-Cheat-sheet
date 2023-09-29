@@ -1009,8 +1009,8 @@ try {
 /*setTimeout()*/
 /*invokes function after a period of time*/
 let aMSG1 = "WHY...";
-let timer1 = setTimeout(Popup1, 4500, aMSG1);
-let timer2 = setTimeout(Popup2, 6500, aMSG1);
+let timer1 = setTimeout(Popup1, 10000, aMSG1);
+let timer2 = setTimeout(Popup2, 10000, aMSG1);
 
 function Popup1() {
   alert(`RANDOM POP UP ! ${aMSG1}`);
@@ -1031,13 +1031,55 @@ document.getElementById("Popup").onclick = function () {
 /*invokes function after period of time repeatedly*/
 /*Varible must be before setInterval otherwise reverts
 back to the orginal number each rotation*/
-let count3 = 4;
+let count3 = 2;
 
-const myTimer = setInterval(countDown, 3000);
+const myTimer = setInterval(countDown, 10000);
 function countDown() {
   count3 -= 1;
   alert(`${count3}...`);
   if (count3 == 1) {
     clearInterval(myTimer);
   }
+}
+console.log("\n");
+
+/*Date & Time*/
+/*Current date & time*/
+let date1 = new Date();
+/*Get specific part of date & time*/
+let year = date1.getFullYear();
+let hour = date1.getHours();
+/*Simplifes date structure*/
+date1 = date1.toLocaleString();
+
+console.log(`1) Current date & time : ${date1}`);
+console.log(`The year : ${year}`);
+console.log(`The hour : ${hour}`);
+
+/*Set date & time*/
+let date2 = new Date();
+date2.setFullYear(2000);
+date2.setMonth(0);
+date2.setHours(24);
+date2.setMinutes(0);
+date2.setSeconds(0);
+date2 = date2.toLocaleString();
+console.log(`2) Set date : ${date2}`);
+
+/*Choosen date & time*/
+let date3 = new Date("June 6, 1999 06:66");
+date3 = date3.toLocaleString();
+console.log(`3) Choosen date : ${date3}`);
+
+/*Formatting date*/
+/*.toLocaleString must be removed for formatting*/
+let date4 = new Date();
+
+console.log(`4) Formatting date : ${FormattingDate(date4)}`);
+
+function FormattingDate(date) {
+  let theYear = date.getFullYear();
+  let theMonth = date.getMonth() + 1;
+  let theDate = date.getDate();
+  return `${theYear}/${theMonth}/${theDate}`;
 }
