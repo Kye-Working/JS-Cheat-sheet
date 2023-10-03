@@ -1099,6 +1099,17 @@ function update() {
     let theMin = date.getMinutes();
     let theSec = date.getSeconds();
 
-    return `${theHour}:${theMin}:${theSec} ${AMorPM}`;
+    return `${theHour}:${theMin}:${theSec}`;
   }
 }
+
+/*Asynchronous code*/
+/*code outside the sequence (e.g. setInterval())*/
+setTimeout(() => console.log("\n RANDOM TIMED MSG"), 5000);
+console.log("\n");
+
+/*console.time()*/
+/*used to track how long a synchronous operationg takes*/
+console.time();
+alert("CLICK OK...");
+console.timeEnd();
