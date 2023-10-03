@@ -1083,3 +1083,22 @@ function FormattingDate(date) {
   let theDate = date.getDate();
   return `${theYear}/${theMonth}/${theDate}`;
 }
+
+/*Clock*/
+const myClock = document.getElementById("Clock");
+
+update();
+setInterval(update, 1000);
+
+function update() {
+  let date = new Date();
+  myClock.innerHTML = FormattingDate(date);
+
+  function FormattingDate(date) {
+    let theHour = date.getHours();
+    let theMin = date.getMinutes();
+    let theSec = date.getSeconds();
+
+    return `${theHour}:${theMin}:${theSec} ${AMorPM}`;
+  }
+}
