@@ -1113,3 +1113,15 @@ console.log("\n");
 console.time();
 alert("CLICK OK...");
 console.timeEnd();
+
+console.log("\n");
+
+/*Promise*/
+/*an object representing the eventual completion or 
+failure of an asynchronous operation*/
+
+const promise = new Promise((resolve) => {
+  setTimeout(resolve, 2500);
+});
+
+promise.then(() => console.log("Here your promise."));
