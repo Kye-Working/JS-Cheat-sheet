@@ -1125,3 +1125,33 @@ const promise = new Promise((resolve) => {
 });
 
 promise.then(() => console.log("Here your promise."));
+
+/*async*/
+/*makes a function return a Promise*/
+
+/*Element selector*/
+let elementTitle = document.getElementById("theTitle1");
+elementTitle.style.backgroundColor = "lightblue";
+
+let foods = document.getElementsByName("foods");
+foods.forEach((foods) => {
+  if (foods.checked) {
+    console.log(`Default checked food : ${foods.value}`);
+  }
+});
+
+let difFish = document.getElementsByTagName("li");
+difFish[0].style.backgroundColor = "yellow";
+difFish[1].style.backgroundColor = "purple";
+difFish[2].style.backgroundColor = "brown";
+
+let deserts = document.getElementsByClassName("deserts");
+deserts[1].style.backgroundColor = "lightgreen";
+
+/*# - id | . - class name */
+let quary1 = document.querySelector("#theTitle3");
+quary1.style.backgroundColor = "orange";
+
+let quary2 = document.querySelector(".deserts");
+/*if no [] selects first thing of each group*/
+quary2.style.backgroundColor = "red";
