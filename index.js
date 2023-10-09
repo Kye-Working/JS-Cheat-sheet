@@ -1116,19 +1116,6 @@ console.timeEnd();
 
 console.log("\n");
 
-/*Promise*/
-/*an object representing the eventual completion or 
-failure of an asynchronous operation*/
-
-const promise = new Promise((resolve) => {
-  setTimeout(resolve, 2500);
-});
-
-promise.then(() => console.log("Here your promise."));
-
-/*async*/
-/*makes a function return a Promise*/
-
 /*DOM*/
 /*Document Object Model (API)*/
 /*An interface for changing the content of a page*/
@@ -1136,7 +1123,8 @@ console.log(document);
 document.title = "JS-Cheatsheet";
 console.log(document.title);
 console.log(document.URL);
-document.body.style.backgroundColor = "grey";
+document.body.style.backgroundColor = "#323b47";
+document.body.style.color = "#b8a818";
 document.getElementById("counterH1").innerHTML = "!!! Counter !!!";
 console.log("\n");
 
