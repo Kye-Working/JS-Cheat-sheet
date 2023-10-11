@@ -1116,18 +1116,6 @@ console.timeEnd();
 
 console.log("\n");
 
-/*DOM*/
-/*Document Object Model (API)*/
-/*An interface for changing the content of a page*/
-console.log(document);
-document.title = "JS-Cheatsheet";
-console.log(document.title);
-console.log(document.URL);
-document.body.style.backgroundColor = "#323b47";
-document.body.style.color = "#b8a818";
-document.getElementById("counterH1").innerHTML = "!!! Counter !!!";
-console.log("\n");
-
 /*Element selector*/
 let elementTitle = document.getElementById("theTitle1");
 elementTitle.style.backgroundColor = "lightblue";
